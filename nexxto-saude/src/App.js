@@ -6,6 +6,7 @@ import 'popper.js';
 import 'bootstrap';
 import NavBar from './View/NavBar';
 import Adicionar from './Controller/Adicionar';
+import ListaSensores from './View/ListaSensores';
 
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
         {window.localStorage.length>0 ? (
           <div>
             <div className="container">MENSAGEM</div>
-            <div className='container'>Sensores</div>
+            <div className='container'><ListaSensores/></div>
           </div>
         ) : null
         }

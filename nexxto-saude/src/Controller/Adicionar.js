@@ -6,6 +6,7 @@ class Adicionar extends Component {
   constructor(props){
     super(props);
     this.state={
+      id:'',
       name:'',
       tmax: '',
       tmin: '',
@@ -13,6 +14,7 @@ class Adicionar extends Component {
       umin: ''
     }
     this.handleSave = this.handleSave.bind(this);
+    this.id = this.id.bind(this);
     this.name = this.name.bind(this);   
     this.tMax = this.tMax.bind(this);
     this.tMin = this.tMin.bind(this);
@@ -20,6 +22,7 @@ class Adicionar extends Component {
     this.uMin = this.uMin.bind(this); 
   }
 
+  id(e){this.setState({id:e.target.value})};
   name(e){this.setState({name:e.target.value})};
   tMax(e){this.setState({tmax:e.target.value})};
   tMin(e){this.setState({tmin:e.target.value})};
@@ -29,6 +32,7 @@ class Adicionar extends Component {
   handleSave(){
     window.localStorage.setItem( $("#id").val() , JSON.stringify(this.state));
     this.setState({
+      id:'',
       name:'',
       tmax: '',
       tmin: '',
@@ -41,7 +45,7 @@ class Adicionar extends Component {
   render() {
     return (
       <div>
-        <Form saveName={this.name} savetMax={this.tMax} savetMin={this.tMin} saveuMax={this.uMax} saveuMin={this.uMin} save={this.handleSave}/>
+        <Form saveid={this.id} saveName={this.name} savetMax={this.tMax} savetMin={this.tMin} saveuMax={this.uMax} saveuMin={this.uMin} save={this.handleSave}/>
       </div>
     );
   }

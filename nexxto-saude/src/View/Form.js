@@ -17,7 +17,7 @@ class Form extends Component {
               </div>
               <div class="modal-body">
                 <form>
-                  <input type="text" placeholder="ID do sensor" id="id"/>
+                  <input type="text" placeholder="ID do sensor" id="id" onChange={this.props.saveid}/>
                   <input type="text" placeholder="Local instalação sensor" onChange={this.props.saveName}/>
                   <input type="number" placeholder="Temperatura máxima do sensor" onChange={this.props.savetMax}/>
                   <input type="number" placeholder="Temperatura mínima do sensor" onChange={this.props.savetMin}/>

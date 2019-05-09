@@ -1,0 +1,22 @@
+{
+  "sensores":[
+    {
+      "id": "felipe",
+      "temperatura": 80,
+      "umidade": 70,
+      "bateria": 60
+    },
+    {
+      "id": "123",
+      "temperatura": 90,
+      "umidade": 80,
+      "bateria": 70
+    },
+    {
+      "id": "234",
+      "temperatura": 234,
+      "umidade": 234,
+      "bateria": 234
+    }
+  ]
+}
