@@ -22,7 +22,7 @@ class ListaSensores extends Component {
       });
       
       lista.push (
-        <ul> ID: {keys[i]}
+        <ul className="container border border-dark col-5"> ID: {keys[i]}
           <li>Local: {item.name}</li>
           <li>T. Máx: {item.tmax}</li>
           <li>T. Mín: {item.tmin}</li>
@@ -35,7 +35,7 @@ class ListaSensores extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="d-flex flex-wrap">
         {this.criarLista()}
       </div>
     );
