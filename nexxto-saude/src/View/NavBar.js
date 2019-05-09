@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class NavBar extends Component {
   render(){
+    const style={cursor:"pointer"}
     return(
       <nav className="navbar navbar-expand-md navbar-dark bg-primary">
         <a className="navbar-brand" href="#">Nexxto</a>
@@ -10,9 +11,9 @@ class NavBar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            <a className="nav-item nav-link" href="#">Relatório</a>
-            <a className="nav-item nav-link" href="#">Sensores</a>
+            <div className="nav-item nav-link" style={style}>Home <span class="sr-only">(current)</span></div>
+            <div className="nav-item nav-link" style={style}>Relatório</div>
+            <div className="nav-item nav-link" style={style}>Sensores</div>
           </div>
         </div>
       </nav>
