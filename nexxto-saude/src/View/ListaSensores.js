@@ -10,7 +10,7 @@ class ListaSensores extends Component {
       let item = JSON.parse(localStorage.getItem(keys[i]));
       let atual = [];
       (api.sensores).forEach(element => {
-        if(element.id == item.id){
+        if(element.id === item.id){
           atual.push (
             <div>
               <li>T. Atual: {element.temperatura}</li>
