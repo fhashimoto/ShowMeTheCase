@@ -4,7 +4,8 @@ import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap';
 import NavBar from './View/NavBar';
-import Home from './View/Home';
+import Adicionar from './View/Adicionar';
+import Sensores from './View/Sensores';
 
 
 class App extends Component {
@@ -12,7 +13,14 @@ class App extends Component {
     return (
       <div>
         <NavBar/>
-        <Home/>
+        {window.localStorage.length>0 ? (
+          <div>
+            <div className="container">MENSAGEM</div>
+            <div className='container'><Sensores/></div>
+          </div>
+        ) : null
+        }
+        <Adicionar/>
       </div>
     );
   }

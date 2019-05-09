@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-class Home extends Component {
+class Adicionar extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -36,15 +36,9 @@ class Home extends Component {
     }, ()=>alert("Dados Salvos"));
     $(":input").val('');
   }
-
-  render() {    
-    return(
+  render() {
+    return (
       <div>
-        {window.localStorage.length>0 ? 
-          <div>
-          {window.localStorage.getItem('1').name}
-          </div> : null
-        }
         {/* Trigger the modal with a button */}
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Adicione um sensor</button>
         {/* Modal */}
@@ -74,8 +68,8 @@ class Home extends Component {
         </div>
         {/* Final Modal */}
       </div>
-    )
+    );
   }
 }
 
-export default Home;
+export default Adicionar;
