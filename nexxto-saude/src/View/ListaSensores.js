@@ -22,7 +22,7 @@ class ListaSensores extends Component {
       });
       
       lista.push (
-        <ul className="container border border-dark col-5"> ID: {keys[i]}
+        <ul className="container border border-dark col-4 mx-1"> ID: {keys[i]}
           <li>Local: {item.name}</li>
           <li>T. Máx: {item.tmax}</li>
           <li>T. Mín: {item.tmin}</li>
