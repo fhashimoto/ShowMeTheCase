@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   render(){
     const style={cursor:"pointer"}
     return(
       <nav className="navbar navbar-expand-md navbar-dark bg-primary">
-        <a className="navbar-brand" href="#">Nexxto</a>
+      {/* eslint-disable-next-line */}
+        <Link to="/">
+          <a className="navbar-brand" href="#">Nexxto</a>
+        </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
