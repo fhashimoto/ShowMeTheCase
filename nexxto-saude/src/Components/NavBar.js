@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   render(){
@@ -6,7 +7,9 @@ class NavBar extends Component {
     return(
       <nav className="navbar navbar-expand-md navbar-dark bg-primary">
       {/* eslint-disable-next-line */}
-        <a className="navbar-brand" href="#">Nexxto</a>
+        <Link to="/">
+          <a className="navbar-brand" href="#">Nexxto</a>
+        </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

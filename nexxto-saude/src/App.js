@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
-import './App.css';
-// eslint-disable-next-line
-import $ from 'jquery';
-import 'popper.js';
-import 'bootstrap';
-import NavBar from './View/NavBar';
-import Adicionar from './Controller/Adicionar';
-import ListaSensores from './View/ListaSensores';
+import React, {Component} from 'react'
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
+
+import NavBar from './Components/NavBar';
+import Home from './Components/Home';
+import FeatureLista from './Components/FeatureLista';
+import FeatureMapa from './Components/FeatureMapa';
 
 
 class App extends Component {
@@ -21,16 +19,15 @@ class App extends Component {
   }
   render(){
     return (
-      <div>
-        <NavBar/>
-        {window.localStorage.length>0 ? (
-          <div>
-            <div className="container">MENSAGEM</div>
-            <div className='container'><ListaSensores/></div>
-          </div>
-        ) : null
-        }
-        <Adicionar atualizar={this.atualizar.bind(this)}/>
+      <div>        
+        <BrowserRouter>
+          <NavBar/>
+          <Switch>
+            <Route path='/' exact component={Home}/>
+            <Route path='/features/lista' exact component={FeatureLista}/>
+            <Route path='/features/mapa' exact component={FeatureMapa}/>
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
